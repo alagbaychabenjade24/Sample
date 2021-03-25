@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+$font-primary: 'Poppins', sans-serif;
+
+.footer {
+	font-family: $font-primary;
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		margin: 30px 0;
+
+		.important__links {
+			display: flex;
+			justify-content: space-between;
+
+			li {
+				list-style: none;
+				margin-right: 25px;
+
+				a {
+					font-size: 14px;
+					font-weight: 600;
+					text-decoration: none;
+					color: black;
+					transition: 0.2s ease-in;
+
+					&:hover {
+						color: #4267b2;
+						text-decoration: underline;
+					}
+				}
+			}
+		}
+
+		.social__links {
+			display: flex;
+
+			li {
+				list-style: none;
+				margin-left: 20px;
+
+				svg {
+					font-size: 20px;
+					color: black;
+					transition: 0.2s ease-in;
+
+					&:hover {
+						color: #4267b2;
+					}
+				}
+			}
+		}
+	}
+
+	.hr {
+		background-color: rgb(192, 192, 192);
+		height: 1px;
+		width: 100%;
+	}
+
+	&__btm {
+		margin: 30px 0;
+
+		.copyrights {
+			p {
+				font-size: 13px;
+				color: #454545;
+				user-select: none;
+			}
+		}
+	}
+}
+
+@import './mobile/Footer_responsive.scss';

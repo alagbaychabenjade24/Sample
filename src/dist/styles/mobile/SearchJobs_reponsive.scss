@@ -1,0 +1,100 @@
+@media screen and (max-width: 890px) {
+	.findtalent {
+		&__bg {
+			height: 650px;
+		}
+
+		&__head {
+			height: 650px;
+
+			p {
+				margin: 1rem 0 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.findtalent {
+		&__bg {
+			height: 550px;
+		}
+
+		&__head {
+			height: 550px;
+
+			h1 {
+				font-size: 18px;
+			}
+
+			h2 {
+				font-size: 35px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 670px) {
+	.findtalent {
+		&__bg {
+			height: 650px;
+		}
+
+		&__head {
+			height: 650px;
+
+			p {
+				margin: 1rem 0 0;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.findtalent {
+		&__bg {
+			height: 700px;
+		}
+
+		&__head {
+			height: 700px;
+		}
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.findtalent {
+		&__bg {
+			height: 100vh;
+		}
+
+		&__head {
+			height: 100vh;
+			padding-top: 80px;
+		}
+	}
+}
+
+@media screen and (max-width: 380px) {
+	.findtalent {
+		&__bg {
+			height: 750px;
+		}
+
+		&__head {
+			height: 750px;
+		}
+	}
+}
+
+@media screen and (max-width: 335px) {
+	.findtalent {
+		&__bg {
+			height: 840px;
+		}
+
+		&__head {
+			height: 840px;
+		}
+	}
+}

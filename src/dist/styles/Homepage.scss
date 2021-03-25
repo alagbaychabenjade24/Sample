@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+$font-primary: 'Work Sans', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+.homepage {
+	background-image: url('../img/profiles/homepage-bg.png');
+	background-position: top center;
+	background-size: cover;
+	height: 100vh;
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		background-color: rgba(0, 0, 0, 0.288);
+	}
+
+	&__container {
+		position: absolute;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		height: 100vh;
+		padding-bottom: 150px;
+	}
+
+	&__title {
+		font-family: $font-primary;
+		font-size: 4.5rem;
+		color: white;
+	}
+
+	&__subtitle {
+		font-family: $font-secondary;
+		font-size: 1.5rem;
+		color: white;
+		max-width: 700px;
+	}
+
+	&--btns {
+		margin-top: 2.5rem;
+		margin-left: 30px;
+
+		a {
+			button {
+				font-family: $font-secondary;
+				font-weight: 600;
+				border: none;
+				border-radius: 25px;
+				padding: 12px 35px;
+				margin-right: 10px;
+				cursor: pointer;
+			}
+
+			.find__talent {
+				background-color: rgb(255, 222, 89);
+			}
+
+			.search__jobs {
+				color: white;
+				background-color: rgb(115, 115, 115);
+			}
+		}
+	}
+}
+
+@import './mobile/Homepage_responsive.scss';
