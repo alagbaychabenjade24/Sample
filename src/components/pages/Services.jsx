@@ -1,534 +1,266 @@
-import React, { useState, useEffect } from 'react';
-import { Helmet } from 'react-helmet';
-import { Link } from 'react-scroll';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
-import disableScroll from 'disable-scroll';
+import React from 'react';
+import { Carousel } from 'react-responsive-carousel';
+import ReactPlayer from 'react-player';
+
 import Footer from '../Footer';
 
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import '../../dist/styles/Services.scss';
 
-import GetOne from '../../dist/img/icons/get_1-min.png';
-import GetTwo from '../../dist/img/icons/get_2-min.png';
-import GetThree from '../../dist/img/icons/get_3-min.png';
-import GetFour from '../../dist/img/icons/get_4-min.png';
-import PlansImg from '../../dist/img/side/plans-img.png';
-import { AiOutlineClose } from 'react-icons/ai';
-// import { FaPython } from 'react-icons/fa';
+import TestimonialVideo from '../../dist/vid/Danielle-Cornelissen-01.mp4';
+
+import QoutationMark from '../../dist/img/icons/quotation-mark.png';
+import StickyNavbar from '../StickyNavbar';
+import { Helmet } from 'react-helmet';
 
 function Services() {
-	useEffect(() => {
-		Aos.init({ duration: 2000 });
-	}, []);
-
-	const [click, setClick] = useState(false);
-
-	const clickQoute = () => {
-		setClick(!false);
-		window.scrollTo({
-			top: 0
-		});
-		disableScroll.on();
-	};
-
-	const clickCloseQoute = () => {
-		setClick(false);
-		disableScroll.off();
+	const vidShadow = {
+		boxShadow:
+			'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px'
 	};
 
 	return (
-		<section className='services'>
-			<Helmet>
-				<title>
-					Services - BSA Solutions Inc - A Holistic Outsourcing Solution
-				</title>
-			</Helmet>
+		<>
+			<StickyNavbar />
 
-			<div className='minmax'>
+			<section className='services'>
+				<Helmet>
+					<title>
+						Services - BSA Solutions Inc - A Holistic Outsourcing Solution
+					</title>
+				</Helmet>
+
 				<div className='services__container'>
-					<div className='services__header'>
-						<h1 className='header__title'>
-							Lorem ipsum dolor sit amet consectetur. Suscipit, ea!
-						</h1>
-
-						<p className='header__subtitle'>
-							Lorem ipsum dolor sit amet.
-						</p>
-
-						<Link
-							to='services__opts'
-							smooth={true}
-							duration={1000}
-							className='header--btn'
-						>
-							Get Started Now
-						</Link>
-					</div>
-
-					<div className='services__opts' id='services__opts'>
-						<div className='opt' data-aos='fade-up'>
-							<h2 className='opt__title'>Smart Build</h2>
-
-							<p className='opt__subtitle'>
-								One time fixed cost. No hourly rate. Unlimited time.
-								Price varies subject to scope and timeframe.
-							</p>
-
-							<button
-								type='button'
-								className='opt--btn'
-								onClick={clickQoute}
-							>
-								Get a Qoute
-							</button>
-
-							<aside className='divider'></aside>
-
-							<ul className='opt__perks'>
-								<div className='row'>
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-								</div>
-
-								<div className='row'>
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-								</div>
-							</ul>
-						</div>
-
-						<div className='opt' data-aos='fade-up'>
-							<h2 className='opt__title'>Smart Scale</h2>
-
-							<p className='opt__subtitle'>
-								Monthly subscription fee. No hourly rate. Unlimited
-								time. Price varies subject to scope and timeframe.
-							</p>
-
-							<button
-								type='button'
-								className='opt--btn opt--btn__two'
-								onClick={clickQoute}
-							>
-								Get a Qoute
-							</button>
-
-							<aside className='divider'></aside>
-
-							<ul className='opt__perks'>
-								<div className='row'>
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-								</div>
-
-								<div className='row'>
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-								</div>
-							</ul>
-						</div>
-
-						<div className='opt' data-aos='fade-up'>
-							<h2 className='opt__title'>Smart Accelerate</h2>
-
-							<p className='opt__subtitle'>
-								Fixed fee per project. No hourly rate. Unlimited time.
-								Price varies subject to scope and timeframe.
-							</p>
-
-							<button
-								type='button'
-								className='opt--btn'
-								onClick={clickQoute}
-							>
-								Get a Qoute
-							</button>
-
-							<aside className='divider'></aside>
-
-							<ul className='opt__perks'>
-								<div className='row'>
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-								</div>
-
-								<div className='row'>
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-
-									<li>
-										<img
-											src='https://saleslayer.com/assets/images/check.png'
-											alt=''
-										/>
-										<p>Lorem, ipsum dolor.</p>
-									</li>
-								</div>
-							</ul>
+					<div className='services__main'>
+						<div className='minmax'>
+							<div className='services__main__content'>
+								<h1>
+									We meet you where you are, <br />
+									and ask you where to next?
+								</h1>
+							</div>
 						</div>
 					</div>
 
-					<aside
-						className={
-							click
-								? 'getAQoute getAQoute__active disableScroll'
-								: 'getAQoute'
-						}
-					>
-						<div
-							className='getAQoute__overflow'
-							onClick={clickCloseQoute}
-						></div>
+					<div className='minmax'>
+						<div className='services__options'>
+							<div className='option'>
+								<div className='option__title'>
+									<h2>Smart Build</h2>
+								</div>
 
-						<div className='getAQoute__container'>
-							<div className='getAQoute__close'>
-								<AiOutlineClose onClick={clickCloseQoute} />
+								<div className='option__subtitle'>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. Iure nulla nesciunt nisi sunt, cupiditate
+										et.
+									</p>
+								</div>
+
+								<div className='option--btn'>
+									<button type='button'>Get A Quote</button>
+								</div>
+
+								<hr />
+
+								<div className='option__perks'>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+								</div>
 							</div>
 
-							<div className='getAQoute__title'>
-								<h1>Get a qoute</h1>
+							<div className='option'>
+								<div className='option__title'>
+									<h2>Smart Scale</h2>
+								</div>
+
+								<div className='option__subtitle'>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. Iure nulla nesciunt nisi sunt, cupiditate
+										et.
+									</p>
+								</div>
+
+								<div className='option--btn'>
+									<button type='button'>Get A Quote</button>
+								</div>
+
+								<hr />
+
+								<div className='option__perks'>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+								</div>
 							</div>
 
-							<div className='getAQoute__form'>
-								<form>
-									<div className='row__field'>
-										<label htmlFor='first_name'></label>
-										<input
-											type='text'
-											id='first_name'
-											name='first_name'
-											placeholder='First Name'
-										/>
-									</div>
+							<div className='option'>
+								<div className='option__title'>
+									<h2>Smart Accelerate</h2>
+								</div>
 
-									<div className='row__field'>
-										<label htmlFor='surname'></label>
-										<input
-											type='text'
-											id='surname'
-											name='surname'
-											placeholder='Surname'
-										/>
-									</div>
+								<div className='option__subtitle'>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing
+										elit. Iure nulla nesciunt nisi sunt, cupiditate
+										et.
+									</p>
+								</div>
 
-									<div className='row__field'>
-										<label htmlFor='email'></label>
-										<input
-											type='email'
-											id='email'
-											name='email'
-											placeholder='Email'
-										/>
-									</div>
+								<div className='option--btn'>
+									<button type='button'>Get A Quote</button>
+								</div>
 
-									<div className='row__field'>
-										<label htmlFor='company_name'></label>
-										<input
-											type='text'
-											id='company__name'
-											name='company_name'
-											placeholder='Company Name'
-										/>
-									</div>
+								<hr />
 
-									<div className='row__field'>
-										<input
-											type='checkbox'
-											name='accept'
-											id='accept'
-										/>
-										<label htmlFor='accept'>
-											Lorem, ipsum dolor.
-										</label>
-									</div>
-
-									<div className='row__field'>
-										<input
-											type='submit'
-											value='Request Information'
-										/>
-									</div>
-								</form>
+								<div className='option__perks'>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+									<li>Lorem, ipsum dolor.</li>
+								</div>
 							</div>
-						</div>
-					</aside>
-
-					<div className='services__plans'>
-						<div className='plans__content'>
-							<p className='content__what'>Plans</p>
-
-							<h2 className='content__title'>
-								Stretch your business with flexible pricing
-							</h2>
-
-							<p className='content__para content__first__para'>
-								At BSA Solutions Inc, we want every business to be able
-								to get the advantage of smarter Product Information
-								Management. That's why our pricing is just as flexible
-								as BSA Solutions Inc itself.
-							</p>
-
-							<p className='content__para content__sec__para'>
-								If you already know what you need, speak to our team for
-								a comprehensive quote.
-							</p>
-						</div>
-
-						<div className='plans__img'>
-							<img src={PlansImg} alt='plans img' />
 						</div>
 					</div>
 
-					<aside className='services__get'>
-						<h3 className='get__title'>
-							Whichever package you choose, you'll get:
-						</h3>
+					<div className='minmax'>
+						<div className='services__slides'>
+							<Carousel
+								showThumbs={false}
+								showStatus={false}
+								infiniteLoop
+							>
+								<div className='services__slide'>
+									<div className='slide__title'>
+										<h2>Shared Services</h2>
+									</div>
 
-						<div className='get__grid'>
-							<div className='get'>
-								<img src={GetOne} alt='get one icon' />
+									<div className='slide__subtitle'>
+										<p>
+											Lorem ipsum dolor sit amet, consectetuer
+											adipiscing elit. Aenean commodo ligula eget
+											dolor. Aenean massa. Cum sociis natoque
+											penatibus et magnis dis parturient montes,
+											nascetur ridiculus mus. Donec qu
+										</p>
+									</div>
+								</div>
 
-								<h4>Lorem, ipsum dolor.</h4>
+								<div className='services__slide'>
+									<div className='slide__title'>
+										<h2>Managed Operations</h2>
+									</div>
+
+									<div className='slide__subtitle'>
+										<p>
+											Lorem ipsum dolor sit amet, consectetuer
+											adipiscing elit. Aenean commodo ligula eget
+											dolor. Aenean massa. Cum sociis natoque
+											penatibus et magnis dis parturient montes,
+											nascetur ridiculus mus. Donec qu
+										</p>
+									</div>
+								</div>
+
+								<div className='services__slide'>
+									<div className='slide__title'>
+										<h2>Business Advisory</h2>
+									</div>
+
+									<div className='slide__subtitle'>
+										<p>
+											Lorem ipsum dolor sit amet, consectetuer
+											adipiscing elit. Aenean commodo ligula eget
+											dolor. Aenean massa. Cum sociis natoque
+											penatibus et magnis dis parturient montes,
+											nascetur ridiculus mus. Donec qu
+										</p>
+									</div>
+								</div>
+							</Carousel>
+						</div>
+					</div>
+
+					<div className='quote__card'>
+						<div className='services__testimonial'>
+							<div className='testimonial__video'>
+								<ReactPlayer
+									url={TestimonialVideo}
+									controls
+									width='100%'
+									height='100%'
+									style={vidShadow}
+								/>
 							</div>
 
-							<div className='get'>
-								<img src={GetTwo} alt='get two icon' />
+							<div className='testimonial__quote'>
+								<div className='quote__author'>
+									<h1>Danielle Cornelissen</h1>
+								</div>
 
-								<h4>Lorem, ipsum dolor.</h4>
-							</div>
+								<div className='quote__text'>
+									<p>
+										"Lorem, ipsum dolor sit amet consectetur
+										adipisicing elit. Est consequatur id, autem
+										distinctio accusamus aut.
+									</p>
+								</div>
 
-							<div className='get'>
-								<img src={GetThree} alt='get three icon' />
+								<div className='quote__position'>
+									<h2>Founder + CEO</h2>
+								</div>
 
-								<h4>Lorem, ipsum dolor.</h4>
-							</div>
+								<div className='quote__mark'>
+									<img src={QoutationMark} alt='quotation mark' />
+								</div>
 
-							<div className='get'>
-								<img src={GetFour} alt='get four icon' />
-
-								<h4>Lorem, ipsum dolor.</h4>
+								<div className='quote--btn'>
+									<button></button>
+								</div>
 							</div>
 						</div>
-					</aside>
+					</div>
+
+					<div className='minmax'>
+						<div className='clients'>
+							<div className='clients__logo'></div>
+
+							<div className='clients__intro'>
+								<div className='intro__title'>
+									<p>Our clients</p>
+								</div>
+
+								<div className='intro__subtitle'>
+									<p>Companies that trust BSA Solutions Inc.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div className='minmax'>
+						<div className='clients__slide'>
+							<div className='slide__track'>
+								<div className='slide'>
+									<img src='' alt='' />
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
+			</section>
 
 			<Footer />
-		</section>
+		</>
 	);
 }
 

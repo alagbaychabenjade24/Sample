@@ -1,35 +1,59 @@
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
 	.footer {
 		&__top {
-			display: block;
+			grid-template-columns: repeat(1, 1fr);
+			grid-gap: 50px;
+		}
+	}
+}
 
-			.important__links {
-				display: block;
-				width: 100%;
-
-				li {
-					padding: 16px 0;
+@media screen and (max-width: 618px) {
+	.footer {
+		&__top {
+			.top__left {
+				.left__company__name {
+					h1 {
+						font-size: 2rem;
+					}
 				}
 			}
 
-			.social__links {
-				justify-content: space-between;
-				width: 35%;
-				padding: 16px 0 0;
+			.top__right {
+				display: block;
 
-				li {
-					margin-left: 0;
-					margin-right: 20px;
+				.right__ph {
+					margin-right: 0;
+					margin-bottom: 50px;
+				}
+			}
+		}
+	}
+}
 
-					svg {
-						font-size: 24px;
+@media screen and (max-width: 380px) {
+	.footer {
+		&__top {
+			.top__left {
+				.left__company__name {
+					h1 {
+						font-size: 1.8rem;
 					}
 				}
 			}
 		}
+	}
+}
 
-		.hr {
-			display: none;
+@media screen and (max-width: 320px) {
+	.footer {
+		&__top {
+			.top__left {
+				.left__company__name {
+					h1 {
+						font-size: 1.6rem;
+					}
+				}
+			}
 		}
 	}
 }

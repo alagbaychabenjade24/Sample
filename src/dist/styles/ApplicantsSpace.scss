@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+$font-primary: 'Work Sans', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+.applicants__space {
+	&__home {
+		position: relative;
+		background-image: url('../img/profiles/applicants-space-home-one.png');
+		background-position: center;
+		background-size: cover;
+		padding: 200px 0 70px;
+
+		&__overlay {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.705);
+		}
+
+		.minmax {
+			position: relative;
+		}
+
+		&__content {
+			text-align: center;
+			color: white;
+			margin: 0 auto;
+
+			h1 {
+				font-family: $font-secondary;
+				font-size: 18px;
+				font-weight: 400;
+				margin-bottom: 1rem;
+			}
+
+			h2 {
+				font-family: $font-primary;
+				font-size: 3rem;
+				font-weight: 500;
+			}
+
+			p {
+				font-family: $font-secondary;
+				font-weight: 300;
+				line-height: 1.8;
+				max-width: 850px;
+				margin: 20px auto 50px;
+			}
+
+			a {
+				font-family: $font-secondary;
+				font-weight: 500;
+				color: black;
+				background-color: #fdc535;
+				border-radius: 10px;
+				padding: 12px 30px;
+				cursor: pointer;
+			}
+		}
+	}
+
+	&__intro {
+		margin: 30px 0;
+
+		h2 {
+			font-family: $font-primary;
+			text-align: center;
+		}
+	}
+}
+
+@import './mobile/ApplicantsSpace_responsive.scss';

@@ -5,325 +5,209 @@ $font-primary: 'Work Sans', sans-serif;
 $font-secondary: 'Poppins', sans-serif;
 
 .services {
-	&__header {
-		text-align: center;
-		margin: 150px 0;
+	&__main {
+		background-color: #fdc535;
+		background-image: url('https://static.kalibrr.com/home/banners/banner_id_03_dark.__d39e488c__.jpg');
+		background-size: cover;
+		padding: 250px 0 50px;
 
-		.header__title {
-			font-family: $font-primary;
-			font-size: 3.8rem;
-			font-weight: 600;
-			color: #22303d;
-		}
-
-		.header__subtitle {
-			font-family: $font-secondary;
-			font-size: 1.2rem;
-			color: #46637f;
-			margin: 25px 0 45px;
-		}
-
-		.header--btn {
-			font-family: $font-secondary;
-			font-size: 1.1rem;
-			font-weight: 500;
-			color: white;
-			background-color: #33b49a;
-			border: none;
-			border-radius: 25px;
-			max-width: 230px;
-			padding: 13px 26px;
-			margin: 0 auto;
-			cursor: pointer;
+		&__content {
+			h1 {
+				font-family: $font-primary;
+				font-size: 3rem;
+				color: white;
+			}
 		}
 	}
 
-	&__opts {
+	&__options {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 15px;
-		width: 90%;
+		grid-gap: 30px;
+		width: 85%;
 		margin: 100px auto;
 
-		.opt:nth-of-type(1),
-		.opt:nth-of-type(3) {
-			box-shadow: 0 0 20px rgb(230, 230, 230);
-			background-color: #f4f6f9;
-		}
-
-		.opt:nth-of-type(2) {
-			box-shadow: 0 0 20px rgb(230, 230, 230);
-			transform: scale(1.1);
-			padding: 2.7rem 20px 5rem;
-		}
-
-		.opt {
-			position: relative;
-			padding: 40px 20px;
-			transition: 0.3s ease-in-out;
+		.option {
+			box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+			padding: 20px;
+			transition: 1s;
 
 			&__title {
 				font-family: $font-primary;
-				font-size: 1.9rem;
 				text-align: center;
-				color: #22303d;
 			}
 
 			&__subtitle {
 				font-family: $font-secondary;
-				font-size: 15px;
 				text-align: center;
-				line-height: 1.7;
-				color: #46637f;
-				width: 90%;
-				margin: 1.5rem auto 3rem auto;
+				margin: 25px 0 40px;
 			}
 
 			&--btn {
-				display: flex;
-				justify-content: center;
-				font-family: $font-secondary;
-				font-weight: 500;
-				background-color: white;
-				border: 2px solid rgb(255, 222, 89);
-				border-radius: 25px;
-				width: 150px;
-				max-width: 150px;
-				padding: 13px 26px;
-				margin: 0 auto;
-				cursor: pointer;
-				transition: 0.3s ease-in;
+				width: 60%;
+				margin: 25px auto;
 
-				&:hover {
-					background-color: rgb(255, 222, 89);
-				}
-
-				&__two {
-					background-color: rgb(255, 222, 89);
+				button {
+					font-family: $font-secondary;
+					font-weight: 500;
+					border: none;
+					border-radius: 25px;
+					background-color: #fdc535;
+					padding: 10px 0;
+					width: 100%;
+					cursor: pointer;
 				}
 			}
 
-			.divider {
-				background-color: #fdc535;
-				height: 1px;
-				width: 100%;
-				margin: 30px 0;
+			hr {
+				margin: 25px 0;
 			}
 
 			&__perks {
 				li {
-					display: flex;
-					align-items: center;
-					list-style: none inside;
-					margin-bottom: 8px;
-					user-select: none;
-
-					img {
-						padding-right: 1rem;
-					}
-
-					p {
-						font-family: $font-secondary;
-						font-size: 0.9rem;
-						color: #46637f;
-					}
+					font-family: $font-secondary;
+					font-size: 14px;
+					list-style-position: inside;
+					list-style-image: url('../img/icons/list-check.png');
+					margin: 8px 0;
 				}
 			}
 		}
 	}
 
-	.getAQoute {
-		display: none;
-		z-index: 9999;
-
-		&__overflow {
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			right: 0;
-			left: 0;
-			background-color: rgba(0, 0, 0, 0.563);
+	&__slides {
+		.slide {
+			text-align: start;
+			height: 350px;
 		}
 
-		&__container {
-			position: absolute;
-			z-index: 99999;
-			top: 30px;
-			left: 50%;
-			transform: translateX(-50%);
-			margin: 0 auto;
-			background-color: white;
-			border-radius: 5px;
-			width: 400px;
-			max-width: 100%;
-			padding: 20px;
-			margin: 0 auto;
-		}
+		.services__slide {
+			position: relative;
+			margin: 40px 0;
 
-		&__close {
-			position: absolute;
-			top: 0;
-			right: 0;
-			font-size: 20px;
-			display: flex;
-			justify-content: flex-end;
-			padding: 1rem;
-			cursor: pointer;
-		}
-
-		&__title {
-			padding-top: 2.5rem;
-			margin-bottom: 2rem;
-
-			h1 {
-				font-family: $font-primary;
-				font-size: 2.5rem;
-				text-align: center;
-				color: #22303d;
-			}
-		}
-
-		form {
-			.row__field {
-				font-family: $font-secondary;
-
-				input {
-					border: 1px solid #d5dde5;
-					border-radius: 5px;
-					width: 100%;
-					padding: 12px 24px;
+			.slide__title {
+				h2 {
+					font-family: $font-primary;
+					font-size: 5rem;
+					color: #f3c755;
 				}
+			}
+
+			.slide__subtitle {
+				position: absolute;
+				top: 30px;
+				right: 0;
+				z-index: 9999;
+				margin: 50px;
 
 				p {
 					font-family: $font-secondary;
-					font-size: 12.5px;
-					color: red;
-					user-select: none;
-					padding-top: 5px;
+					font-size: 1.5rem;
+					font-weight: 300;
+					line-height: 2;
+					color: #050720;
+					max-width: 60rem;
 				}
-			}
-
-			.row__field:nth-of-type(5) {
-				display: flex;
-				align-items: center;
-
-				#accept {
-					width: auto;
-					margin-right: 10px;
-				}
-
-				label {
-					font-size: 13px;
-				}
-			}
-
-			.row__field:nth-last-of-type(1) {
-				display: flex;
-
-				input {
-					font-weight: 600;
-					color: white;
-					border: none;
-					background-color: #267f6d;
-					border-radius: 25px;
-					width: auto;
-					margin: 0 auto;
-					cursor: pointer;
-					transition: 0.2s ease-in;
-
-					&:hover {
-						background-color: #267f6de3;
-					}
-				}
-			}
-
-			.row__field:nth-of-type(even) {
-				margin: 15px 0;
 			}
 		}
 	}
 
-	.getAQoute__active {
-		display: block;
+	.quote__card {
+		width: 80%;
+		max-width: 1080px;
+		margin: 0 auto;
 	}
 
-	&__plans {
-		display: flex;
-		margin: 150px 0 100px;
-
-		.plans__content {
-			margin-right: 100px;
-
-			.content__what {
-				font-family: $font-secondary;
-				color: #d6b428;
-			}
-
-			.content__title {
-				font-family: $font-primary;
-				font-size: 3rem;
-				color: #22303d;
-				margin-bottom: 25px;
-			}
-
-			.content__para {
-				font-family: $font-secondary;
-				color: #46637f;
-			}
-
-			.content__first__para {
-				margin-bottom: 25px;
-			}
-		}
-
-		.plans__img {
-			img {
-				width: 505px;
-			}
-		}
-	}
-
-	&__get {
+	&__testimonial {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 50px;
+		border-radius: 20px;
+		box-shadow: 0px 0px 74px 0px rgba(214, 214, 214, 1);
+		padding: 100px 30px;
 		margin: 100px 0;
 
-		.get__title {
-			font-family: $font-primary;
-			font-size: 1rem;
-			font-weight: 400;
-			text-align: center;
-			color: #46637f;
-			margin-bottom: 70px;
-		}
+		.testimonial__quote {
+			position: relative;
 
-		.get__grid {
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			grid-gap: 50px;
+			.quote__author {
+				position: absolute;
+				top: -55px;
+				left: -200px;
 
-			.get {
-				text-align: center;
-				padding: 30px;
-				transition: 0.3s linear;
-
-				&:hover {
-					img {
-						transform: scale(1.1);
-					}
-				}
-
-				img {
-					width: 87px;
-					transition: 0.3s linear;
-				}
-
-				h4 {
-					font-family: $font-secondary;
-					font-weight: 500;
-					color: #202d3a;
-					margin-top: 1rem;
-					user-select: none;
+				h1 {
+					font-family: $font-primary;
+					font-size: 3rem;
+					color: #343434;
 				}
 			}
+
+			.quote__position {
+				h2 {
+					font-family: $font-secondary;
+					font-size: 18px;
+					font-weight: 300;
+					color: rgb(63, 63, 63);
+					text-transform: uppercase;
+					letter-spacing: 5px;
+				}
+			}
+
+			.quote__text {
+				p {
+					font-family: $font-primary;
+					font-size: 25px;
+					font-weight: 600;
+					font-style: italic;
+					color: rgb(63, 63, 63);
+					line-height: 1.8;
+					padding: 20px 0 25px;
+				}
+			}
+
+			.quote__mark {
+				position: absolute;
+				right: 0;
+				bottom: -95px;
+
+				img {
+					width: 130px;
+				}
+			}
+		}
+	}
+
+	.clients__slide {
+		background-color: rgb(242, 242, 242);
+		border-radius: 10px;
+		max-width: 80%;
+		margin: 50px auto;
+		overflow: hidden;
+
+		.slide__track {
+			display: flex;
+			width: calc(250px * 8);
+			animation: moveSlide 40s linear infinite;
+		}
+
+		.slide {
+			height: 250px;
+			display: flex;
+			align-items: center;
+			padding: 15px;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+
+	@keyframes moveSlide {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(calc(-250px * 4));
 		}
 	}
 }

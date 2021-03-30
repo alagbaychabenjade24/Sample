@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+$font-primary: 'Work Sans', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+.static__nav {
+	position: absolute;
+	width: 100%;
+	padding: 25px 0;
+	z-index: 999999;
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		text-decoration: none;
+
+		img {
+			border-radius: 100%;
+			width: 60px;
+			margin-right: 15px;
+		}
+
+		h1 {
+			font-family: $font-primary;
+			font-size: 1.8rem;
+			color: rgb(232, 230, 227);
+		}
+	}
+
+	&__links {
+		display: flex;
+		justify-content: space-between;
+		width: 45%;
+
+		li {
+			list-style-type: none;
+
+			a {
+				font-family: $font-secondary;
+				color: rgb(232, 230, 227);
+				text-decoration: none;
+			}
+		}
+	}
+
+	&__menu {
+		display: none;
+		align-items: center;
+		font-size: 35px;
+		color: white;
+		cursor: pointer;
+	}
+}
+
+@import './mobile/StaticNavbar_responsive.scss';

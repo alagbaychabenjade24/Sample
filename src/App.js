@@ -1,21 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
-import NavigationBar from './components/Navbar';
 import Services from './components/pages/Services';
 import ApplicantSpace from './components/pages/ApplicantSpace';
 import Homepage from './components/pages/Homepage';
+import AboutUs from './components/pages/AboutUs';
 
 function App() {
 	return (
 		<div className='App'>
 			<Router>
-				<NavigationBar />
-
 				<Switch>
 					<Route exact path='/' component={Homepage} />
+					<Route path='/about-us' component={AboutUs} />
 					<Route path='/services' component={Services} />
-					<Route path='/applicant-space' component={ApplicantSpace} />
+					<Route path='/applicants-space' component={ApplicantSpace} />
 				</Switch>
 			</Router>
 		</div>

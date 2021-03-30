@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+$font-primary: 'Work Sans', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+.aboutus {
+	&__header {
+		position: relative;
+		background-image: url('../img/profiles/aboutus-bg.png');
+		background-position: center;
+		background-size: cover;
+
+		.minmax {
+			position: relative;
+		}
+
+		.header__content {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 50px;
+			padding: 150px 0 100px;
+			z-index: 9;
+
+			.content__text {
+				h1 {
+					font-family: $font-primary;
+					font-size: 2.5rem;
+					color: rgb(214, 214, 214);
+				}
+
+				p {
+					font-family: $font-secondary;
+					line-height: 2;
+					color: white;
+					margin: 15px 0 30px;
+				}
+
+				button {
+					font-family: $font-secondary;
+					font-weight: 500;
+					background-color: rgba(255, 255, 255, 0.857);
+					border: none;
+					border-radius: 10px;
+					padding: 10px 30px;
+					cursor: pointer;
+					transition: 0.2s ease-in;
+
+					&:hover {
+						background-color: #f9c50b;
+					}
+				}
+			}
+
+			.content__vid {
+				video {
+					border-radius: 10px;
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__overlay {
+		background-color: rgba(0, 0, 0, 0.611);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+}

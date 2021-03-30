@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+$font-primary: 'Work Sans', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+.hr__nav {
+	display: flex;
+	align-items: center;
+	font-size: 14px;
+
+	img {
+		display: flex;
+		align-items: center;
+		margin: 0 10px;
+	}
+
+	a {
+		text-decoration: none;
+		color: black;
+		cursor: pointer;
+	}
+}
+
+.applicants__space__professions {
+	display: flex;
+	justify-content: center;
+	margin: 50px 0;
+
+	.card {
+		box-shadow: 0 6px 6px 0 #ddd;
+		text-decoration: none;
+		width: 200px;
+		margin: 0 30px;
+
+		.card__img {
+			img {
+				width: 100%;
+			}
+		}
+
+		&__title {
+			h3 {
+				font-family: $font-secondary;
+				color: black;
+				padding: 10px;
+			}
+		}
+	}
+}
+
+@import './mobile/Professions_responsive.scss';

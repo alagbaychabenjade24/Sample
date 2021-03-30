@@ -1,147 +1,112 @@
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1280px) {
 	.services {
-		&__header {
-			.header__title {
-				font-size: 3rem;
+		&__slides {
+			.services__slide {
+				.slide__title {
+					h2 {
+						font-size: 5rem;
+					}
+				}
+
+				.slide__subtitle {
+					p {
+						max-width: 55rem;
+					}
+				}
 			}
 		}
+	}
+}
 
-		&__opts {
+@media screen and (max-width: 1024px) {
+	.services {
+		&__testimonial {
 			grid-template-columns: repeat(1, 1fr);
-			grid-gap: 50px;
-			width: 85%;
 
-			.opt:nth-of-type(2) {
-				transform: scale(1);
-				padding: 40px 20px;
+			.testimonial__video {
+				div {
+					margin: 0 auto;
+				}
 			}
 
-			.opt {
-				width: 80%;
-				margin: 0 auto;
+			.testimonial__quote {
+				.quote__author {
+					position: static;
+				}
 
-				&__perks {
-					display: flex;
-					justify-content: space-between;
-					width: 80%;
+				.quote__mark {
+					bottom: -70px;
 
-					.row:nth-of-type(1) {
-						margin-right: 50px;
-					}
-
-					li {
-						img {
-							padding-right: 1rem;
-						}
-
-						p {
-							font-size: 0.9rem;
-						}
+					img {
+						width: 100px;
 					}
 				}
 			}
 		}
 
-		&__plans {
-			display: block;
-
-			.plans__content {
-				margin-right: 0;
-				margin-bottom: 30px;
-			}
-
-			.plans__img {
-				img {
-					width: 100%;
+		&__slides {
+			.services__slide {
+				.slide__title {
+					h2 {
+						font-size: 4.7rem;
+					}
 				}
-			}
-		}
 
-		&__get {
-			.get__grid {
-				grid-gap: 20px;
+				.slide__subtitle {
+					top: 30px;
 
-				.get {
-					padding: 30px 10px;
+					p {
+						max-width: 50rem;
+					}
 				}
 			}
 		}
 	}
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
 	.services {
-		&__header {
-			.header__title {
-				font-size: 40px;
+		&__bsa__carousel {
+			.bsa__carousel {
+				grid-template-columns: repeat(1, 1fr);
+				grid-gap: 50px;
 			}
 		}
 
-		&__opts {
-			.opt {
-				width: 85%;
+		&__options {
+			grid-template-columns: repeat(2, 1fr);
+			width: 90%;
+		}
 
-				&__perks {
-					display: block;
+		&__slides {
+			.slide {
+				text-align: start;
+				height: 450px;
+			}
 
-					.row:nth-of-type(1) {
-						margin-right: 0;
+			.services__slide {
+				.slide__title {
+					h2 {
+						font-size: 4rem;
+					}
+				}
+
+				.slide__subtitle {
+					top: 20px;
+
+					p {
+						max-width: 45rem;
 					}
 				}
 			}
 		}
 
-		&__plans {
-			.plans__content {
-				.content__title {
-					font-size: 2rem;
-				}
-			}
-		}
+		&__testimonial {
+			padding: 30px 20px 50px;
 
-		&__get {
-			.get__title {
-				margin-bottom: 40px;
-			}
-
-			.get__grid {
-				grid-template-columns: repeat(2, 1fr);
-				grid-gap: 20px;
-
-				.get {
-					padding: 30px 10px;
-				}
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.services {
-		&__opts {
-			.opt {
-				width: 100%;
-
-				&__perks {
-					width: 100%;
-				}
-			}
-		}
-
-		.getAQoute {
-			&__container {
-				top: 150px;
-				left: 50%;
-			}
-		}
-
-		&__get {
-			.get__grid {
-				grid-template-columns: repeat(2, 1fr);
-				grid-gap: 20px;
-
-				.get {
-					padding: 30px 10px;
+			.testimonial__quote {
+				.quote__mark {
+					bottom: -30px;
 				}
 			}
 		}
@@ -150,17 +115,85 @@
 
 @media screen and (max-width: 480px) {
 	.services {
-		&__header {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			height: 100vh;
-			margin: 0;
+		&__options {
+			grid-template-columns: repeat(1, 1fr);
+			width: 90%;
 		}
 
-		.getAQoute {
-			&__container {
-				max-width: 90%;
+		&__testimonial {
+			grid-gap: 30px;
+			padding: 30px 20px 50px;
+
+			.testimonial__quote {
+				.quote__author {
+					h1 {
+						font-size: 2.3rem;
+					}
+				}
+
+				.quote__position {
+					h2 {
+						font-size: 18px;
+					}
+				}
+
+				.quote__text {
+					p {
+						font-size: 20px;
+						padding: 30px 0 20px;
+					}
+				}
+
+				.quote__mark {
+					bottom: -30px;
+
+					img {
+						width: 70px;
+					}
+				}
+			}
+		}
+
+		&__slides {
+			.slide {
+				text-align: start;
+				height: 550px;
+			}
+
+			.services__slide {
+				.slide__title {
+					h2 {
+						font-size: 2.2rem;
+					}
+				}
+
+				.slide__subtitle {
+					top: -10px;
+
+					p {
+						font-size: 1.3rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.services {
+		&__testimonial {
+			padding: 30px 20px 50px;
+
+			.testimonial__quote {
+				.quote__text {
+					p {
+						padding: 20px 0 15px;
+					}
+				}
+
+				.quote__mark {
+					bottom: -50px;
+				}
 			}
 		}
 	}
