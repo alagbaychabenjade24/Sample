@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+
+$font-primary: 'Work Sans', sans-serif;
+$font-secondary: 'Poppins', sans-serif;
+
+.team {
+	margin: 50px 0;
+
+	&__border {
+		border: 2px solid yellow;
+		width: max-content;
+		padding: 20px;
+		margin: 50px 0;
+
+		h2 {
+			font-family: $font-primary;
+			font-size: 2rem;
+			font-weight: 500;
+			line-height: 1.5;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-gap: 50px;
+
+		.row,
+		.row__reverse {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 50px;
+
+			.description {
+				h2 {
+					font-family: $font-primary;
+					font-size: 2.5rem;
+				}
+
+				.position__social-media {
+					display: flex;
+					justify-content: space-between;
+					margin: 1rem 0;
+
+					h3 {
+						font-family: $font-secondary;
+						font-weight: 600;
+					}
+
+					a {
+						display: flex;
+						align-items: center;
+						color: black;
+						border-radius: 5px;
+						background-color: yellow;
+						padding: 7px;
+					}
+				}
+
+				p {
+					font-family: $font-primary;
+					line-height: 1.8;
+				}
+			}
+
+			.player {
+				video {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

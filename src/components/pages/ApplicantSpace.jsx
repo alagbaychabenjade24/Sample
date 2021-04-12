@@ -36,22 +36,19 @@ function ApplicantSpace() {
 
 						<div className='minmax'>
 							<div className='applicants__space__home__content'>
-								<h1>Discovering World's Best and Brightest Talents</h1>
+								<h1>Grooming World-Class Talents</h1>
 								<h2>
 									<span>We're more than just a workplace.</span> <br />
 									<span>We're a family.</span>
 								</h2>
 
 								<p>
-									We know that finding a meaningful and rewarding job
-									can be a long journey. Our goal is to make that
-									process as easy as possible for you. We create a work
-									environment that's satisfying, one where you'll look
-									forward to coming to every day. A place where the
-									best and brightest minds meet to build a community of
-									successful companies. Start your journey with us by
-									browsing available jobs in the Philippines and
-									Malaysia.
+									We create a work environment that's satisfying, one
+									where you'll look forward to coming to every day. A
+									place where the best and brightest minds meet to
+									build a community of successful companies. Start your
+									journey with us by browsing available jobs in the
+									Philippines and Malaysia.
 								</p>
 
 								<Scroll to='listing' smooth={true} duration={1000}>

@@ -7,10 +7,10 @@ $font-secondary: 'Poppins', sans-serif;
 .applicants__space {
 	&__home {
 		position: relative;
-		background-image: url('../img/profiles/applicants-space-home-one.png');
 		background-position: center;
 		background-size: cover;
 		padding: 200px 0 70px;
+		animation: BgSlides 40s infinite alternate;
 
 		&__overlay {
 			position: absolute;
@@ -61,6 +61,18 @@ $font-secondary: 'Poppins', sans-serif;
 				padding: 12px 30px;
 				cursor: pointer;
 			}
+		}
+	}
+
+	@keyframes BgSlides {
+		0% {
+			background-image: url('../img/profiles/applicants-slide-one.jpg');
+		}
+		50% {
+			background-image: url('../img/profiles/applicants-slide-two.jpeg');
+		}
+		100% {
+			background-image: url('../img/profiles/applicants-slide-three.jpg');
 		}
 	}
 

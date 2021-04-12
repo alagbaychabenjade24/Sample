@@ -6,67 +6,34 @@ $font-secondary: 'Poppins', sans-serif;
 
 .aboutus {
 	&__header {
-		position: relative;
+		display: none;
 		background-image: url('../img/profiles/aboutus-bg.png');
 		background-position: center;
 		background-size: cover;
-
-		.minmax {
-			position: relative;
-		}
+		padding: 200px 0 100px;
 
 		.header__content {
-			display: grid;
-			grid-template-columns: repeat(2, 1fr);
-			grid-gap: 50px;
-			padding: 150px 0 100px;
-			z-index: 9;
+			padding-bottom: 80px;
 
-			.content__text {
-				h1 {
-					font-family: $font-primary;
-					font-size: 2.5rem;
-					color: rgb(214, 214, 214);
-				}
-
-				p {
-					font-family: $font-secondary;
-					line-height: 2;
-					color: white;
-					margin: 15px 0 30px;
-				}
-
-				button {
-					font-family: $font-secondary;
-					font-weight: 500;
-					background-color: rgba(255, 255, 255, 0.857);
-					border: none;
-					border-radius: 10px;
-					padding: 10px 30px;
-					cursor: pointer;
-					transition: 0.2s ease-in;
-
-					&:hover {
-						background-color: #f9c50b;
-					}
-				}
-			}
-
-			.content__vid {
-				video {
-					border-radius: 10px;
-					width: 100%;
-				}
+			h1 {
+				font-family: $font-primary;
 			}
 		}
-	}
 
-	&__overlay {
-		background-color: rgba(0, 0, 0, 0.611);
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		left: 0;
-		right: 0;
+		.header--btns {
+			display: flex;
+			justify-content: center;
+
+			a {
+				font-family: $font-secondary;
+				font-weight: 500;
+				text-decoration: none;
+				color: white;
+				background-color: #fdc535;
+				border-radius: 5px;
+				padding: 8px 20px;
+				margin: 0 25px;
+			}
+		}
 	}
 }

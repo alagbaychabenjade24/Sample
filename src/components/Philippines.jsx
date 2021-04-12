@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 
 import '../dist/styles/Professions.scss';
 
+import FinanceAccounting from '../dist/img/side/finance-services.jpg';
+import DigitalMarketingECommerce from '../dist/img/side/digital-marketing-e-commerce.jpeg';
+import ProjectServices from '../dist/img/side/project-services.jpeg';
+
 const Philippines = () => {
 	const refreshComponent = () => window.location.reload();
 
@@ -25,10 +29,7 @@ const Philippines = () => {
 					className='card'
 				>
 					<div className='card__img'>
-						<img
-							src='https://images.unsplash.com/photo-1520695082671-948f2937d752?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80'
-							alt=''
-						/>
+						<img src={FinanceAccounting} alt='Finance & Accounting' />
 					</div>
 
 					<div className='card__title'>
@@ -42,8 +43,8 @@ const Philippines = () => {
 				>
 					<div className='card__img'>
 						<img
-							src='https://images.unsplash.com/photo-1520695082671-948f2937d752?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80'
-							alt=''
+							src={DigitalMarketingECommerce}
+							alt='Digital Marketing & E-commerce'
 						/>
 					</div>
 
@@ -57,10 +58,7 @@ const Philippines = () => {
 					className='card'
 				>
 					<div className='card__img'>
-						<img
-							src='https://images.unsplash.com/photo-1520695082671-948f2937d752?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80'
-							alt=''
-						/>
+						<img src={ProjectServices} alt='Project Services' />
 					</div>
 
 					<div className='card__title'>

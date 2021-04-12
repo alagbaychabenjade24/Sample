@@ -1,0 +1,66 @@
+@media screen and (max-width: 320px) {
+	.contactus {
+		&__head {
+			padding: 150px 0 50px;
+
+			.head__title {
+				font-size: 3.2rem;
+				margin-bottom: 10px;
+			}
+
+			.loc {
+				&__wrapper {
+					display: block;
+
+					.ph {
+						margin-right: 0;
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+
+		&__sides {
+			width: 95%;
+			margin: 50px auto 100px;
+
+			.sides__head {
+				.head__title {
+					font-size: 2rem;
+				}
+
+				.head__subtitle {
+					line-height: 2;
+					margin: 15px 0 60px;
+				}
+			}
+
+			.sides__aside {
+				.row__field {
+					margin: 30px 0;
+				}
+
+				.field__dark {
+					display: block;
+					padding: 20px;
+
+					.ts {
+						img {
+							display: none;
+						}
+					}
+
+					.css {
+						img {
+							display: none;
+						}
+					}
+				}
+
+				.field__light {
+					padding: 20px;
+				}
+			}
+		}
+	}
+}

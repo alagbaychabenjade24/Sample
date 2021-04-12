@@ -13,6 +13,8 @@ import QoutationMark from '../../dist/img/icons/quotation-mark.png';
 import StickyNavbar from '../StickyNavbar';
 import { Helmet } from 'react-helmet';
 
+import OneWorldConsulting from '../../dist/img/icons/one-world-consulting.png';
+
 function Services() {
 	const vidShadow = {
 		boxShadow:
@@ -138,6 +140,7 @@ function Services() {
 							<Carousel
 								showThumbs={false}
 								showStatus={false}
+								autoPlay={true}
 								infiniteLoop
 							>
 								<div className='services__slide'>
@@ -223,15 +226,11 @@ function Services() {
 								<div className='quote__mark'>
 									<img src={QoutationMark} alt='quotation mark' />
 								</div>
-
-								<div className='quote--btn'>
-									<button></button>
-								</div>
 							</div>
 						</div>
 					</div>
 
-					<div className='minmax'>
+					{/* <div className='minmax'>
 						<div className='clients'>
 							<div className='clients__logo'></div>
 
@@ -245,13 +244,29 @@ function Services() {
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> */}
 
 					<div className='minmax'>
 						<div className='clients__slide'>
 							<div className='slide__track'>
 								<div className='slide'>
-									<img src='' alt='' />
+									<img src={OneWorldConsulting} alt='' />
+									<img src={OneWorldConsulting} alt='' />
+									<img src={OneWorldConsulting} alt='' />
+									<img src={OneWorldConsulting} alt='' />
+									<img src={OneWorldConsulting} alt='' />
+
+									<img src={OneWorldConsulting} alt='' />
+									<img src={OneWorldConsulting} alt='' />
+									<img src={OneWorldConsulting} alt='' />
+									<img src={OneWorldConsulting} alt='' />
+									<img src={OneWorldConsulting} alt='' />
+
+									<img src={OneWorldConsulting} alt='' />
+									<img src={OneWorldConsulting} alt='' />
+									<img src={OneWorldConsulting} alt='' />
+									<img src={OneWorldConsulting} alt='' />
+									<img src={OneWorldConsulting} alt='' />
 								</div>
 							</div>
 						</div>

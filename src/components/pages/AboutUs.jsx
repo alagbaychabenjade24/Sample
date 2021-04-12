@@ -1,42 +1,54 @@
 import React from 'react';
-import ReactPlayer from 'react-player';
+import { Link as Scroll } from 'react-scroll';
+import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 import '../../dist/styles/AboutUs.scss';
+import StickyNavbar from '../StickyNavbar';
 
-import BSABrochure from '../../dist/vid/BSA Brochure V3 002.mp4';
+import Team from '../Team';
 
 function AboutUs() {
 	return (
-		<section className='aboutus'>
-			<div className='aboutus__container'>
-				<div className='aboutus__header'>
-					<div className='aboutus__overlay'></div>
+		<>
+			<StickyNavbar />
 
-					<div className='minmax'>
-						<div className='header__content'>
-							<div className='content__text'>
-								<h1>Lorem ipsum dolor sit amet consectetur.</h1>
+			<section className='aboutus'>
+				<Helmet>
+					<title>
+						About Us - BSA Solutions Inc - A Holistic Outsourcing Solution
+					</title>
+				</Helmet>
+
+				<div className='aboutus__container'>
+					<div className='aboutus__header'>
+						<div className='minmax'>
+							<div className='header__content'>
+								<h1>Lorem ipsum dolor sit.</h1>
 
 								<p>
-									Lorem, ipsum dolor sit amet consectetur adipisicing
-									elit. Hic nam quis nobis dolor non cum tenetur
-									doloremque qui excepturi provident.
+									Lorem ipsum, dolor sit amet consectetur adipisicing
+									elit. Quia cupiditate nobis ratione illum? Cupiditate
+									minus commodi ducimus quam doloremque qui.
 								</p>
-
-								<button>Sample Text</button>
 							</div>
 
-							<ReactPlayer
-								url={BSABrochure}
-								className='content__vid'
-								playing={true}
-								loop={true}
-							/>
+							<div className='header--btns'>
+								<Scroll to='team' smooth={true} duration={1000}>
+									Meet our Team
+								</Scroll>
+
+								<Link to='/applicants-space'>Applicants Space</Link>
+
+								<Link to='/contact-us'>Contact Us</Link>
+							</div>
 						</div>
 					</div>
+
+					<Team />
 				</div>
-			</div>
-		</section>
+			</section>
+		</>
 	);
 }
 

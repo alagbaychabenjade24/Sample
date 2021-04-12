@@ -3,6 +3,9 @@ import { Link } from 'react-router-dom';
 
 import '../dist/styles/Location.scss';
 
+import Philippines from '../dist/img/side/philippines.jpg';
+import Malaysia from '../dist/img/side/malaysia.jpg';
+
 const Locations = () => {
 	const refreshComponent = () => window.location.reload();
 
@@ -15,10 +18,7 @@ const Locations = () => {
 			<div className='applicants__space__cards'>
 				<Link to='applicants-space/philippines' className='card'>
 					<div className='card__img'>
-						<img
-							src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/View_from_Grand_Hyatt_Manila_overlooking_Bonifacio_Global_City_and_Makati_skylines_at_sunset.jpg/700px-View_from_Grand_Hyatt_Manila_overlooking_Bonifacio_Global_City_and_Makati_skylines_at_sunset.jpg'
-							alt=''
-						/>
+						<img src={Philippines} alt='philippines' />
 					</div>
 
 					<div className='card__country'>
@@ -28,10 +28,7 @@ const Locations = () => {
 
 				<Link to='applicants-space/malaysia' className='card'>
 					<div className='card__img'>
-						<img
-							src='https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/View_from_Grand_Hyatt_Manila_overlooking_Bonifacio_Global_City_and_Makati_skylines_at_sunset.jpg/700px-View_from_Grand_Hyatt_Manila_overlooking_Bonifacio_Global_City_and_Makati_skylines_at_sunset.jpg'
-							alt=''
-						/>
+						<img src={Malaysia} alt='malaysia' />
 					</div>
 
 					<div className='card__country'>

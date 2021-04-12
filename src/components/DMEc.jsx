@@ -24,8 +24,8 @@ const DMEc = () => {
 						/>
 					</span>
 
-					<Link exact to='/applicants-space/malaysia'>
-						Malaysia
+					<Link exact to='/applicants-space/philippines'>
+						Philippines
 					</Link>
 
 					<span>
